@@ -5,32 +5,26 @@ namespace thiagova\DB;
 class Sql {
 
 	const HOSTNAME = "app.db";
-	const USERNAME = "lamp_user";
-	const PASSWORD = "lamp_pw";
-	const DBNAME = "lamp_db";
+	const USERNAME = "root";
+	const PASSWORD = "root";
+	const DBNAME = "db_ecommerce";
 
 	private $conn;
 
 	public function __construct()
 	{
-
 		$this->conn = new \PDO(
 			"mysql:dbname=".Sql::DBNAME.";host=".Sql::HOSTNAME, 
 			Sql::USERNAME,
 			Sql::PASSWORD
 		);
-
 	}
 
 	private function setParams($statement, $parameters = array())
 	{
-
 		foreach ($parameters as $key => $value) {
-			
 			$this->bindParam($statement, $key, $value);
-
 		}
-
 	}
 
 	private function bindParam($statement, $key, $value)
