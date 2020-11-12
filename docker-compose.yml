@@ -1,12 +1,15 @@
 version: "3"
 services:
     web:
+        build:
+            context: .
+            dockerfile: Dockerfile
         image: php:7.2-apache
         container_name: "app"
         volumes:
-            - $PWD:/var/www/html
+            - ./:/var/www/html/
         ports: 
-            - "8081:80"
+            - "8083:80"
         links: 
             - "db:app.db"
     db:
