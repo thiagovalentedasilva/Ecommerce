@@ -2,9 +2,8 @@ version: "3"
 services:
     web:
         build:
-            context: .
+            context: ./
             dockerfile: Dockerfile
-        image: php:7.2-apache
         container_name: "app"
         volumes:
             - ./:/var/www/html/
