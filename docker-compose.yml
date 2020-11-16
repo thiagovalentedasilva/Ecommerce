@@ -10,7 +10,7 @@ services:
         ports: 
             - "8083:80"
         links: 
-            - "db:app.db"
+            - "db:app"
     db:
         image: mysql:5.7
         container_name: "app.db"
