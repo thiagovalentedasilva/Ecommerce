@@ -9,6 +9,7 @@ RUN apt-get install -yq libmcrypt-dev
 #RUN apt-get install -yq libpng12-dev
 RUN apt-get install -yq libjpeg-dev
 RUN apt-get install -yq libpng-dev
+RUN a2enmod rewrite 
 
 #RUN docker-php-ext-configure gd
 #RUN docker-php-ext-install gd
