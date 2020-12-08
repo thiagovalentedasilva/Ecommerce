@@ -16,5 +16,4 @@ RUN apt-get install -yq libpng-dev
 #https://www.jaccon.com.br/instalando-gd-em-uma-imagem-docker-com-apache/
 
 #RUN apt-get install php7.1-gd
-#RUN a2enmod rewrite 
-#RUN systemctl restart apache2
+RUN a2enmod rewrite
